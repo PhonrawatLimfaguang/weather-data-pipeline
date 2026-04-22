@@ -272,7 +272,8 @@ SELECT
     ROUND(AVG(f.temperature), 2) AS avg_temperature
 FROM fact_weather f
 JOIN dim_location l ON f.location_id = l.location_id
-GROUP BY l.region;
+GROUP BY l.region
+ORDER BY avg_temperature DESC;
 ```
 
 ![Region Result](images/query_result.png)
@@ -300,11 +301,17 @@ ORDER BY avg_temperature DESC;
 ```sql
 SELECT 
     t.hour,
-    COUNT(*) AS total_records
+    COUNT(*) AS total_records,
+    CASE 
+        WHEN t.hour BETWEEN 5 AND 11 THEN 'Morning'
+        WHEN t.hour BETWEEN 12 AND 16 THEN 'Afternoon'
+        WHEN t.hour BETWEEN 17 AND 20 THEN 'Evening'
+        ELSE 'Night'
+    END AS time_period
 FROM fact_weather f
 JOIN dim_time t ON f.time_id = t.time_id
 GROUP BY t.hour
-ORDER BY t.hour;
+ORDER BY total_records DESC;
 ```
 
 ![Time Result](images/query_time.png)
@@ -315,30 +322,51 @@ ORDER BY t.hour;
 
 จากการวิเคราะห์ข้อมูลพบว่า:
 
-* ภาคเหนือมีอุณหภูมิเฉลี่ยสูงที่สุด
-* ภาคใต้มีอุณหภูมิต่ำที่สุดเนื่องจากอิทธิพลจากทะเล
-* ภาคกลางและภาคตะวันออกเฉียงเหนือมีค่าใกล้เคียงกัน
+### ด้านภูมิภาค (Region)
 
-ในระดับเมืองพบว่า:
+* ภาคเหนือมีอุณหภูมิเฉลี่ยสูงที่สุด ≈ **36.42°C**
+* ภาคกลางมีอุณหภูมิเฉลี่ย ≈ **36.04°C**
+* ภาคตะวันออกเฉียงเหนือมีอุณหภูมิเฉลี่ย ≈ **35.95°C**
+* ภาคใต้มีอุณหภูมิเฉลี่ยต่ำที่สุด ≈ **33.09°C**
 
-* Chiang Mai มีอุณหภูมิสูงที่สุด
-* Phuket มีอุณหภูมิต่ำที่สุด
+---
 
-ในด้านเวลา:
+### ด้านเมือง (City)
 
-* ระบบมีการเก็บข้อมูลในช่วงเวลา 06:00 - 09:00 มากที่สุด
-* แสดงให้เห็นว่า pipeline ทำงานแบบ scheduled (batch processing)
+* Chiang Mai มีอุณหภูมิเฉลี่ยสูงที่สุด ≈ **37.73°C**
+* Khon Kaen ≈ **36.58°C**
+* Bangkok ≈ **36.04°C**
+* Phuket มีอุณหภูมิต่ำที่สุด ≈ **32.26°C**
 
-การใช้ Star Schema ช่วยให้สามารถ join ข้อมูลระหว่าง fact และ dimension ได้ง่าย ทำให้การวิเคราะห์ข้อมูลมีประสิทธิภาพมากขึ้น
+---
+
+### ด้านเวลา (Time Analysis)
+
+* ช่วงเวลา **04:00 (Night)** มีจำนวนข้อมูลมากที่สุด ≈ **25 records**
+* รองลงมาคือช่วง **05:00 (Morning)** ≈ **10 records**
+* ช่วงเวลา **09:00** ≈ **9 records**
+* แสดงให้เห็นว่า pipeline ทำงานแบบ scheduled (Batch Processing) และมีการรันในช่วงเวลาที่กำหนด
+
+---
+
+### มุมมองด้าน Data Architecture
+
+การออกแบบ Data Warehouse แบบ Star Schema ช่วยให้:
+
+* สามารถ join ระหว่าง fact และ dimension ได้ง่าย
+* รองรับการวิเคราะห์ข้อมูลหลายมิติ (Multi-dimensional Analysis)
+* ลดความซับซ้อนของ query และเพิ่มประสิทธิภาพในการวิเคราะห์
 
 ---
 
 ## 12. สรุป (Conclusion)
 
-โปรเจกต์นี้แสดงให้เห็นการพัฒนา Data Pipeline แบบ End-to-End ตั้งแต่การดึงข้อมูลจาก API การแปลงข้อมูล ไปจนถึงการจัดเก็บในรูปแบบ Data Warehouse
+โปรเจกต์นี้แสดงให้เห็นการพัฒนา Data Pipeline แบบ End-to-End ตั้งแต่การดึงข้อมูลจาก API (Extract) การแปลงข้อมูล (Transform) ไปจนถึงการจัดเก็บในรูปแบบ Data Warehouse (Load)
 
-การออกแบบด้วย Star Schema ช่วยให้สามารถวิเคราะห์ข้อมูลได้ง่ายและมีประสิทธิภาพ
-รวมถึงสามารถนำไปต่อยอดในระบบ Business Intelligence หรือ Dashboard ได้ในอนาคต
+ข้อมูลถูกจัดเก็บในรูปแบบ Star Schema ซึ่งเหมาะสำหรับการวิเคราะห์ (Analytical Processing) และสามารถนำไปต่อยอดในระบบ Business Intelligence (BI) หรือ Dashboard ได้ในอนาคต
+
+นอกจากนี้ pipeline ยังสามารถทำงานแบบอัตโนมัติ (Scheduled Batch Processing) ผ่าน Apache Airflow ทำให้สามารถรองรับการเก็บข้อมูลแบบต่อเนื่องได้
+
 
 ---
 
@@ -377,3 +405,9 @@ http://localhost:8080
 * เปลี่ยนจาก SQLite ไปใช้ Data Warehouse ระดับ Production เช่น PostgreSQL หรือ BigQuery
 * เพิ่มระบบ Data Quality Check เพื่อตรวจสอบความถูกต้องของข้อมูลอัตโนมัติ
 
+
+
+
+<p align="center">
+  <img src="images/thankyou_banner.png" width="1000">
+</p>
