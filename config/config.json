@@ -1,0 +1,14 @@
+{
+  "api_url": "https://api.openweathermap.org/data/2.5/weather",
+  "units": "metric",
+  "cities": [
+    "Bangkok,th",
+    "Chiang Mai,th",
+    "Chiang Rai,th",
+    "Phuket,th",
+    "Khon Kaen,th",
+    "Udon Thani,th",
+    "Surat Thani,th",
+    "Nakhon Ratchasima,th"
+  ]
+}

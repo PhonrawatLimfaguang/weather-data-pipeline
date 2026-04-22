@@ -1,0 +1,45 @@
+{
+    "coord": {
+        "lon": 99,
+        "lat": 18.75
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 38.95,
+        "feels_like": 41.54,
+        "temp_min": 37.33,
+        "temp_max": 40.5,
+        "pressure": 1003,
+        "humidity": 31,
+        "sea_level": 1003,
+        "grnd_level": 960
+    },
+    "visibility": 6000,
+    "wind": {
+        "speed": 3.09,
+        "deg": 170
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1776753881,
+    "sys": {
+        "type": 1,
+        "id": 9244,
+        "country": "TH",
+        "sunrise": 1776726169,
+        "sunset": 1776771742
+    },
+    "timezone": 25200,
+    "id": 1153670,
+    "name": "Chiang Mai",
+    "cod": 200
+}

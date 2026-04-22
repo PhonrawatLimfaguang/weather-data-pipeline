@@ -1,0 +1,12 @@
+city,country,region,temperature,feels_like,temp_min,temp_max,humidity,pressure,weather,weather_desc,wind_speed,clouds,timestamp,datetime_24h,datetime_12h,date,hour,time_period
+Bangkok,TH,Central,37.6,44.6,33.94,38.3,50,1006,Clouds,scattered clouds,5.07,42,1776753265,2026-04-21 06:34:25,2026-04-21 06:34:25 AM,2026-04-21,6,Morning
+Bangkok,TH,Central,37.47,44.47,33.94,37.75,50,1006,Clouds,scattered clouds,5.07,42,1776753872,2026-04-21 06:44:32,2026-04-21 06:44:32 AM,2026-04-21,6,Morning
+Chiang Mai,TH,North,38.95,41.54,37.33,40.5,31,1003,Clouds,few clouds,3.09,20,1776753881,2026-04-21 06:44:41,2026-04-21 06:44:41 AM,2026-04-21,6,Morning
+Khon Kaen,TH,Northeast,36.14,36.38,36.14,36.14,30,1004,Clear,clear sky,1.82,4,1776753739,2026-04-21 06:42:19,2026-04-21 06:42:19 AM,2026-04-21,6,Morning
+Phuket,TH,South,33.12,40.12,33.12,33.12,62,1008,Clouds,few clouds,4.12,20,1776753901,2026-04-21 06:45:01,2026-04-21 06:45:01 AM,2026-04-21,6,Morning
+Bangkok,TH,Central,37.12,44.12,33.94,37.75,49,1007,Clouds,scattered clouds,5.08,31,1776751733,2026-04-21 06:08:53,2026-04-21 06:08:53 AM,2026-04-21,6,Morning
+Bangkok,TH,Central,37.12,44.12,33.94,37.75,49,1007,Clouds,scattered clouds,5.08,31,1776752352,2026-04-21 06:19:12,2026-04-21 06:19:12 AM,2026-04-21,6,Morning
+Bangkok,TH,Central,37.6,44.6,33.94,38.3,50,1007,Clouds,scattered clouds,5.08,31,1776752958,2026-04-21 06:29:18,2026-04-21 06:29:18 AM,2026-04-21,6,Morning
+Bangkok,TH,Central,35.9,42.9,32.94,36.64,53,1008,Clouds,scattered clouds,4.21,38,1776744423,2026-04-21 04:07:03,2026-04-21 04:07:03 AM,2026-04-21,4,Night
+Bangkok,TH,Central,36.03,43.03,32.94,36.64,52,1009,Clouds,scattered clouds,4.21,38,1776745028,2026-04-21 04:17:08,2026-04-21 04:17:08 AM,2026-04-21,4,Night
+Bangkok,TH,Central,36.85,43.85,33.94,37.19,51,1008,Clouds,scattered clouds,4.45,40,1776747162,2026-04-21 04:52:42,2026-04-21 04:52:42 AM,2026-04-21,4,Night

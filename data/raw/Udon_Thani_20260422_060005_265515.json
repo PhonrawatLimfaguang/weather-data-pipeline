@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 102.8333,
+        "lat": 17.3333
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 35.95,
+        "feels_like": 40.51,
+        "temp_min": 35.95,
+        "temp_max": 35.95,
+        "pressure": 1005,
+        "humidity": 44,
+        "sea_level": 1005,
+        "grnd_level": 981
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.06,
+        "deg": 260
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1776837231,
+    "sys": {
+        "type": 1,
+        "id": 9281,
+        "country": "TH",
+        "sunrise": 1776811691,
+        "sunset": 1776857157
+    },
+    "timezone": 25200,
+    "id": 1906686,
+    "name": "Udon Thani",
+    "cod": 200,
+    "_ingest_time": "2026-04-22T06:00:05.265497",
+    "_source": "openweather_api"
+}

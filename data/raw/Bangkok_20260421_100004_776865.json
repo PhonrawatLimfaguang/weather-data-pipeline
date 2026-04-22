@@ -1,0 +1,48 @@
+{
+    "coord": {
+        "lon": 100.5167,
+        "lat": 13.75
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 35.23,
+        "feels_like": 41.64,
+        "temp_min": 34.94,
+        "temp_max": 36.62,
+        "pressure": 1005,
+        "humidity": 51,
+        "sea_level": 1005,
+        "grnd_level": 1004
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.87,
+        "deg": 150,
+        "gust": 7.54
+    },
+    "clouds": {
+        "all": 16
+    },
+    "dt": 1776765179,
+    "sys": {
+        "type": 2,
+        "id": 2105460,
+        "country": "TH",
+        "sunrise": 1776726082,
+        "sunset": 1776771101
+    },
+    "timezone": 25200,
+    "id": 1609350,
+    "name": "Bangkok",
+    "cod": 200,
+    "_ingest_time": "2026-04-21T10:00:04.776852",
+    "_source": "openweather_api"
+}

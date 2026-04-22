@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 99.9167,
+        "lat": 19.9167
+    },
+    "weather": [
+        {
+            "id": 802,
+            "main": "Clouds",
+            "description": "scattered clouds",
+            "icon": "03d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 34.99,
+        "feels_like": 36.62,
+        "temp_min": 34.99,
+        "temp_max": 39.21,
+        "pressure": 1004,
+        "humidity": 38,
+        "sea_level": 1004,
+        "grnd_level": 953
+    },
+    "visibility": 6000,
+    "wind": {
+        "speed": 3.09,
+        "deg": 210
+    },
+    "clouds": {
+        "all": 28
+    },
+    "dt": 1776837410,
+    "sys": {
+        "type": 1,
+        "id": 9256,
+        "country": "TH",
+        "sunrise": 1776812239,
+        "sunset": 1776858009
+    },
+    "timezone": 25200,
+    "id": 1153668,
+    "name": "Chiang Rai",
+    "cod": 200,
+    "_ingest_time": "2026-04-22T05:56:42.155277",
+    "_source": "openweather_api"
+}

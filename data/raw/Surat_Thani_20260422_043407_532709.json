@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 99.25,
+        "lat": 9.1667
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 33.89,
+        "feels_like": 40.89,
+        "temp_min": 33.89,
+        "temp_max": 34.99,
+        "pressure": 1009,
+        "humidity": 87,
+        "sea_level": 1009,
+        "grnd_level": 1008
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.57,
+        "deg": 160
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1776832316,
+    "sys": {
+        "type": 2,
+        "id": 2086563,
+        "country": "TH",
+        "sunrise": 1776813003,
+        "sunset": 1776857566
+    },
+    "timezone": 25200,
+    "id": 1150514,
+    "name": "Surat Thani",
+    "cod": 200,
+    "_ingest_time": "2026-04-22T04:34:07.532683",
+    "_source": "openweather_api"
+}

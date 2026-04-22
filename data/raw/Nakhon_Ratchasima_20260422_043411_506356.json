@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 102.1667,
+        "lat": 15
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 34.98,
+        "feels_like": 41.98,
+        "temp_min": 32.81,
+        "temp_max": 35.08,
+        "pressure": 1008,
+        "humidity": 58,
+        "sea_level": 1008,
+        "grnd_level": 986
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 1.54,
+        "deg": 0
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1776832251,
+    "sys": {
+        "type": 2,
+        "id": 2018582,
+        "country": "TH",
+        "sunrise": 1776811984,
+        "sunset": 1776857184
+    },
+    "timezone": 25200,
+    "id": 1608528,
+    "name": "Nakhon Ratchasima",
+    "cod": 200,
+    "_ingest_time": "2026-04-22T04:34:11.506331",
+    "_source": "openweather_api"
+}

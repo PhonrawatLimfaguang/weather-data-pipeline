@@ -1,0 +1,47 @@
+{
+    "coord": {
+        "lon": 98.25,
+        "lat": 8
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 32.12,
+        "feels_like": 39.12,
+        "temp_min": 32.12,
+        "temp_max": 32.12,
+        "pressure": 1009,
+        "humidity": 70,
+        "sea_level": 1009,
+        "grnd_level": 1005
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.6,
+        "deg": 290
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1776837286,
+    "sys": {
+        "type": 1,
+        "id": 9278,
+        "country": "TH",
+        "sunrise": 1776813305,
+        "sunset": 1776857744
+    },
+    "timezone": 25200,
+    "id": 1151253,
+    "name": "Phuket",
+    "cod": 200,
+    "_ingest_time": "2026-04-22T05:57:02.223114",
+    "_source": "openweather_api"
+}

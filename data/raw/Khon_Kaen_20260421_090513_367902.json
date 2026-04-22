@@ -1,0 +1,46 @@
+{
+    "coord": {
+        "lon": 102.0833,
+        "lat": 16.5
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 37.76,
+        "feels_like": 38.71,
+        "temp_min": 37.76,
+        "temp_max": 37.76,
+        "pressure": 1003,
+        "humidity": 29,
+        "sea_level": 1003,
+        "grnd_level": 974
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.5,
+        "deg": 158,
+        "gust": 3.84
+    },
+    "clouds": {
+        "all": 15
+    },
+    "dt": 1776762321,
+    "sys": {
+        "country": "TH",
+        "sunrise": 1776725556,
+        "sunset": 1776770875
+    },
+    "timezone": 25200,
+    "id": 1609775,
+    "name": "Khon Kaen",
+    "cod": 200,
+    "_ingest_time": "2026-04-21T09:05:13.367876",
+    "_source": "openweather_api"
+}
